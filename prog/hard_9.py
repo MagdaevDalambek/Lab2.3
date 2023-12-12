@@ -26,15 +26,16 @@ def letter_repeat(word1, word2):
             return False
     return True
 
-word1 = input("Введите первое слово: ").lower()
-word2 = input("Введите второе слово: ").lower()
+if __name__ == '__main__':
+    word1 = input("Введите первое слово: ").lower()
+    word2 = input("Введите второе слово: ").lower()
 
-if can_spell(word1, word2):
-    print(f"Можно составить слово '{word2}' из букв слова '{word1}'")
-else:
-    print(f"Нельзя составить слово '{word2}' из букв слова '{word1}'")
+    if can_spell(word1, word2):
+        print(f"Можно составить слово '{word2}' из букв слова '{word1}'")
+    else:
+        print(f"Нельзя составить слово '{word2}' из букв слова '{word1}'")
 
-if letter_repeat(word1, word2):
-    print(f"Можно составить слово '{word2}' из букв слова '{word1}' без учета повторяющихся букв")
-else:
-    print(f"Нельзя составить слово '{word2}' из букв слова '{word1}' без учета повторяющихся букв")
+    if letter_repeat(word1, word2):
+        print(f"Можно составить слово '{word2}' из букв слова '{word1}' без учета повторяющихся букв")
+    else:
+        print(f"Нельзя составить слово '{word2}' из букв слова '{word1}' без учета повторяющихся букв")
